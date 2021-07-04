@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>updateBookDialog</class>
+ <widget class="QDialog" name="updateBookDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>418</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>更新图书信息</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="infoLabel">
+       <property name="font">
+        <font>
+         <family>PingFang SC</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>更新图书？的信息：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <family>PingFang SC</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>旧信息</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>PingFang SC</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>新信息</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QCheckBox" name="nameCheckBox">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>书名</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="authorCheckBox">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>作者</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="typeCheckBox">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>分类</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="pressCheckBox">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>出版社</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="pubTimeCheckBox">
+           <property name="text">
+            <string>出版时间</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="priceCheckBox">
+           <property name="text">
+            <string>价格</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="numbersCheckBox">
+           <property name="text">
+            <string>剩余库存</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="oldNameLabel">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>oldName</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldAuthorLabel">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>oldAuthor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldTypeLabel">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>oldType</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldPressLabel">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>oldPress</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldPubTimeLabel">
+           <property name="text">
+            <string>oldPubTime</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldPriceLabel">
+           <property name="text">
+            <string>oldPrice</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="oldNumbersLabel">
+           <property name="text">
+            <string>oldNumbers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLineEdit" name="newNameLineEdit">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="newAuthorLineEdit">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="newTypeLineEdit"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="newPressLineEdit"/>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="newPubTimeDateEdit"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="newPriceDoubleSpinBox"/>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="newNumbersSpinBox">
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>updateBookDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

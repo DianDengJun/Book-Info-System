@@ -1,0 +1,2315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>816</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>816</width>
+    <height>629</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>816</width>
+    <height>629</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>PingFang SC</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>图书信息管理系统</string>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="welcomeLabel">
+        <property name="font">
+         <font>
+          <family>PingFang SC</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Welcome</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>PingFang SC</family>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabBar::tab:selected {
+	background: rgb(19, 106, 255);
+}</string>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideRight</enum>
+        </property>
+        <property name="usesScrollButtons">
+         <bool>true</bool>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="tabsClosable">
+         <bool>false</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="searchBookTab">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>PingFang SC</family>
+          </font>
+         </property>
+         <attribute name="title">
+          <string>书目检索</string>
+         </attribute>
+         <widget class="QTableWidget" name="bookShowTableWidget">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>150</y>
+            <width>731</width>
+            <height>321</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>编号</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>书名</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>作者</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>分类</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出版社</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出版时间</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>价格</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>当前库存</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>借出数量</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_1">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>0</y>
+            <width>731</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>检索选项</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>711</width>
+             <height>69</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_1">
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_1">
+              <item>
+               <widget class="QCheckBox" name="searchBookNameCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>书名</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="searchBookNameLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QCheckBox" name="searchBookAuthorCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>作者</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="searchBookAuthorLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QCheckBox" name="searchBookTypeCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>分类</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="searchBookTypeLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QCheckBox" name="searchBookPressCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>出版社</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="searchBookPressLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QCheckBox" name="searchBookPubTimeCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>出版时间</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDateEdit" name="searchBookPubTimeDateEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QCheckBox" name="searchBookPriceCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>价格</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="searchBookPriceDoubleSpinBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>110</y>
+            <width>731</width>
+            <height>47</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QPushButton" name="clearInputSearchBookPushButton">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>清空输入</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_1">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QCheckBox" name="searchAllBooksCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询所有书</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="vagueBookCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>模糊匹配</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="quearyBookPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+               <property name="shortcut">
+                <string/>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>470</y>
+            <width>731</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QPushButton" name="clearBookShowPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>清空查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="exportResultBookPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>导出当前查询的结果</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QPushButton" name="borrowBookPushButton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>借选中的书</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="deleteBookPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>删除选中的图书</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="modifyBookPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>修改选中的图书</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="borrowRecordTab">
+         <attribute name="title">
+          <string>我的借书记录</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>20</y>
+            <width>561</width>
+            <height>431</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QTableWidget" name="myBorrowTableWidget">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="showGrid">
+              <bool>true</bool>
+             </property>
+             <property name="gridStyle">
+              <enum>Qt::SolidLine</enum>
+             </property>
+             <property name="sortingEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+             <property name="cornerButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="rowCount">
+              <number>0</number>
+             </property>
+             <column>
+              <property name="text">
+               <string>书本ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>借阅日期</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>归还日期</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>借阅状态</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="showBorrowingCheckBox">
+             <property name="text">
+              <string>仅显示借阅中</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_34">
+             <item>
+              <widget class="QPushButton" name="updateBorrowPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>刷新</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="returnBookPushButton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>归还选中的书</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="importBookTab">
+         <property name="font">
+          <font>
+           <family>PingFang SC</family>
+          </font>
+         </property>
+         <attribute name="title">
+          <string>新书入库</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>761</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>入库信息</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>601</width>
+             <height>59</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLabel" name="newBookNameLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>书名</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newBookNameLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QLabel" name="newBookAuthorLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>作者</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newBookAuthorLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QLabel" name="newBookTypeLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>分类</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newBookTypeLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <item>
+               <widget class="QLabel" name="newBookPressLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>出版社</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newBookPressLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <widget class="QLabel" name="newBookPubTimeLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>出版时间</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDateEdit" name="newBookPubTimeDateEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_19">
+              <item>
+               <widget class="QLabel" name="newBookPriceLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>价格</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="newBookPriceDoubleSpinBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="maximum">
+                 <double>9999.989999999999782</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="3">
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <item>
+               <widget class="QLabel" name="newBookNumbersLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>库存</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="newBookNumbersSpinBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="maximum">
+                 <number>9999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QPushButton" name="doNewBookPushButton">
+           <property name="geometry">
+            <rect>
+             <x>630</x>
+             <y>60</y>
+             <width>113</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>单本入库</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="clearInputNewBookPushButton">
+           <property name="geometry">
+            <rect>
+             <x>630</x>
+             <y>30</y>
+             <width>113</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>清空</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="importNewBooksPushButton">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>141</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>从文件批量导入...</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>761</width>
+            <height>361</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>操作记录</string>
+          </property>
+          <widget class="QTableWidget" name="newBookLogTableWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>741</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::SolidLine</enum>
+           </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="wordWrap">
+            <bool>false</bool>
+           </property>
+           <property name="cornerButtonEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="rowCount">
+            <number>0</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>编号</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>书名</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>作者</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>分类</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>出版社</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>出版时间</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>价格</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>库存</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="borrowManageTab">
+         <attribute name="title">
+          <string>借阅管理</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>0</y>
+            <width>611</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>查询借阅信息</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>28</y>
+             <width>563</width>
+             <height>69</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <item>
+               <widget class="QCheckBox" name="searchRecordReaderIDCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>读者ID</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="searchRecordReaderIDSpinBox">
+                <property name="maximum">
+                 <number>999999999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_36">
+              <item>
+               <widget class="QCheckBox" name="searchRecordBookIDCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>书本ID</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="searchRecordBookIDSpinBox">
+                <property name="maximum">
+                 <number>999999999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2" rowspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_40">
+              <item>
+               <widget class="QCheckBox" name="searchRecordBookStatusCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>借阅状态</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="searchRecordBookStatusComboBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>借阅中</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>已返还</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_38">
+              <item>
+               <widget class="QCheckBox" name="searchRecordBorrowDateCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>借阅日期</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDateEdit" name="searchRecordBorrowDateDateEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_39">
+              <item>
+               <widget class="QCheckBox" name="searchRecordReturnDateCheckBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>归还日期</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDateEdit" name="searchRecordReturnDateDateEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_5">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>110</y>
+            <width>611</width>
+            <height>47</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_42">
+           <item>
+            <widget class="QPushButton" name="clearInputSearchRecordPushButton">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>清空输入</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_44">
+             <item>
+              <widget class="QCheckBox" name="searchAllRecordsCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询所有记录</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="vagueRecordCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>模糊匹配</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="searchRecordPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+               <property name="shortcut">
+                <string/>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QTableWidget" name="recordShowTableWidget">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>150</y>
+            <width>611</width>
+            <height>311</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>读者ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>书本ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>借阅日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>归还日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>借阅状态</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_7">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>470</y>
+            <width>255</width>
+            <height>35</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_45">
+           <item>
+            <widget class="QPushButton" name="clearRecordShowPushButton">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>清空查询</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="exportResultRecordPushButton">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>导出当前查询的结果</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="userManageTab">
+         <attribute name="title">
+          <string>用户检索</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>0</y>
+            <width>681</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>检索选项</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>30</y>
+             <width>541</width>
+             <height>73</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_33">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QCheckBox" name="searchUserNameCheckBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>姓名</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="searchUserNameLineEdit">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <item>
+                 <widget class="QCheckBox" name="searchUserTelCheckBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>电话号码</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="searchUserTelLineEdit">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <item>
+                 <widget class="QCheckBox" name="searchUserMaxBorrowNumbersCheckBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>最大借书量</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="searchUserMaxBorrowNumbersSpinBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="maximum">
+                   <number>9999</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <item>
+                 <widget class="QCheckBox" name="searchUserAgeCheckBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>年龄</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="searchUserAgeSpinBox">
+                  <property name="font">
+                   <font>
+                    <family>PingFang SC</family>
+                   </font>
+                  </property>
+                  <property name="maximum">
+                   <number>200</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QTableWidget" name="userShowTableWidget">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>170</y>
+            <width>731</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>编号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>姓名</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电话号码</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>年龄</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>最大借书量</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>类别</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>密码</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>476</y>
+            <width>731</width>
+            <height>37</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_26">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <widget class="QPushButton" name="clearUserShowPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>清空查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="exportResultUserPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>导出当前查询的结果</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <item>
+              <widget class="QPushButton" name="deleteUserPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>删除选中的用户</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="modifyUserPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>修改选中的用户</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>110</y>
+            <width>661</width>
+            <height>47</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_32">
+           <item>
+            <widget class="QPushButton" name="clearInputSearchUserPushButton">
+             <property name="font">
+              <font>
+               <family>PingFang SC</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>清空输入</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_31">
+             <item>
+              <widget class="QCheckBox" name="searchUserTypeCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>仅显示</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="searchUserTypeComboBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <item>
+                <property name="text">
+                 <string>读者</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>管理员</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <item>
+              <widget class="QCheckBox" name="searchAllUsersCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询所有人</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="vagueUserCheckBox">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>模糊匹配</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="searchUserPushButton">
+               <property name="font">
+                <font>
+                 <family>PingFang SC</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+               <property name="shortcut">
+                <string/>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="newUserTab">
+         <attribute name="title">
+          <string>创建用户</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>0</y>
+            <width>681</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>用户信息</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>40</y>
+             <width>579</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_28">
+              <item>
+               <widget class="QLabel" name="newUserNameLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;姓名&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newUserNameLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2" colspan="3">
+             <layout class="QHBoxLayout" name="horizontalLayout_29">
+              <item>
+               <widget class="QLabel" name="newUserTelLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电话号码&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newUserTelLineEdit">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="5" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_37">
+              <item>
+               <widget class="QLabel" name="newUserPwdLabel">
+                <property name="text">
+                 <string>密码</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="newUserPwdLineEdit"/>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_35">
+              <item>
+               <widget class="QLabel" name="newUserMaxBorrowNumbersLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;最大借书量&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="newUserMaxBorrowNumbersSpinBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="maximum">
+                 <number>9999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_30">
+              <item>
+               <widget class="QLabel" name="newUserAgeLabel">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;年龄：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="newUserAgeSpinBox">
+                <property name="font">
+                 <font>
+                  <family>PingFang SC</family>
+                 </font>
+                </property>
+                <property name="maximum">
+                 <number>200</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="6">
+             <widget class="QPushButton" name="doNewUserPushButton">
+              <property name="font">
+               <font>
+                <family>PingFang SC</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>单用户创建</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QPushButton" name="clearInputNewUserPushButton">
+              <property name="font">
+               <font>
+                <family>PingFang SC</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>清空</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3" colspan="2">
+             <widget class="QCheckBox" name="newUserIsAdminCheckBox">
+              <property name="font">
+               <font>
+                <family>PingFang SC</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>管理员</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>160</y>
+            <width>681</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="title">
+           <string>操作记录</string>
+          </property>
+          <widget class="QTableWidget" name="newUserLogTableWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>661</width>
+             <height>301</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>PingFang SC</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::SolidLine</enum>
+           </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="wordWrap">
+            <bool>false</bool>
+           </property>
+           <property name="cornerButtonEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="rowCount">
+            <number>0</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>编号</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>姓名</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>电话号码</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>年龄</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>最大借书量</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>类别</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="importNewUsersPushButton">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>130</y>
+            <width>141</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>PingFang SC</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>从文件批量导入...</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>816</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="locale">
+    <locale language="Chinese" country="China"/>
+   </property>
+   <widget class="QMenu" name="menuProgram">
+    <property name="title">
+     <string>程序</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAccount">
+    <property name="title">
+     <string>账号</string>
+    </property>
+    <addaction name="actionUserInfomartion"/>
+    <addaction name="actionExitLogin"/>
+   </widget>
+   <addaction name="menuProgram"/>
+   <addaction name="menuAccount"/>
+  </widget>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于图书信息管理系统</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutQtRole</enum>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出图书信息管理系统</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionUserInfomartion">
+   <property name="text">
+    <string>用户信息...</string>
+   </property>
+  </action>
+  <action name="actionExitLogin">
+   <property name="text">
+    <string>退出登录</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
